@@ -295,7 +295,7 @@
 				// loading Analyzer Module
 				await pyodide.runPythonAsync(`
 					from pyodide.http import pyfetch
-					response = await pyfetch("loganalyzer.py")
+					response = await pyfetch("https://raw.githubusercontent.com/hnz101/edgetx-gps-visualizer/refs/heads/main/loganalyzer.py")
 					with open("loganalyzer.py", "wb") as f:
 						f.write(await response.bytes())
 				`)
